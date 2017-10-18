@@ -23,7 +23,7 @@ class PerformUpset {
         // Phrases that will trigger our intent. Note that they will not
         // need to be matched exactly in order for the intent to run.
         phrases: [
-          'Please keep your sarcasm for yourself. I already said I was sorry for yelling at you yesterday!',
+          'Please keep your sarcasm for yourself, I already said I was sorry for yelling at you yesterday!',
         ],
 
         // Lifecycle Events are friendly names for the steps that an intent
@@ -51,7 +51,7 @@ class PerformUpset {
 
         exchange
           .response(resp) // respond to the user  
-          .smartEnd() // end the conversation if appropriate
+          //.smartEnd() // end the conversation if appropriate
           .skipFollowUp();
       },
     };
@@ -59,4 +59,4 @@ class PerformUpset {
 }
 
 // export the plugin so it can be used
-module.exports = performUpset;
+module.exports = PerformUpset;
