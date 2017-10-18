@@ -16,7 +16,7 @@ class PerformUpset {
     // This is where we declare our intents.
     this.intents = {
       // Our intent name
-      performFollowup: {
+      performUpset: {
         // A basic description of the intent
         usage: 'Say sorry about yesterday',
 
@@ -45,8 +45,8 @@ class PerformUpset {
     // interface between Davis, a user, and a plugin. The context
     // object holds any state carried over from previous exchanges.
     this.hooks = {
-      'performFollowup:gatherData': (exchange, context) => null,
-      'performFollowup:respond': (exchange, context) => {
+      'performUpset:gatherData': (exchange, context) => null,
+      'performUpset:respond': (exchange, context) => {
         const resp = 'It is ok. I understand you cannot handle my superior problem handling skills.';
 
         exchange
@@ -59,4 +59,4 @@ class PerformUpset {
 }
 
 // export the plugin so it can be used
-module.exports = PerformFollowup;
+module.exports = performUpset;
